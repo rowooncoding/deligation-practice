@@ -65,11 +65,14 @@ function makeArray(arrayLike){
 
 // alt 변경 
 
+//2. 이벤트를 받는 함수 생성
 function handler(e){
-  
+  // 초기화 방지
   e.preventDefault();
+  // 3. 이벤트 타겟 즉, 클릭이벤트가 진행 되고 있는 요소 중 가장 가까운 li와 a를 변수에 할당
   let target = e.target.closest('li');
   let targetA = e.target.closest('a');
+  // 4. 만약 값이 없다면 함수 종료
   if(!target || !targetA) return;
 
 
@@ -81,19 +84,23 @@ function handler(e){
   // let arr = [...list]
   // Array.prototype.slice.call(list)
   // [li,li,li,li]
+
+  // 5. is-active가 누적 되기 때문에 모든 요소에 is-active를 지우기 위해서 순회하며 제거
   list.forEach( item => removeClass(item,'is-active') )
 
   // attr(visualImage,'src',`./assets/part01/${data[index-1].src}`);
+  // 6. 그림이 안바뀌기 때문에 그림을 바꿔주는 요소 삽입 유틸함수 적용
   attr(visualImage,'src',targetA.href);
 
-
+  // 7. 기본 텍스트도 옯겨줌
   attr(visualImage,'alt',  data[index-1].alt  );
   // visualImage.src = `./assets/part01/visual${index}.jpg`
   // console.log(index);
+  // 8. 타겟에 is-active 삽입
   addClass(target,'is-active');
 }
 
-
+//  1. 클릭이벤트 생성
 navigation.addEventListener('click',handler);
 
 
