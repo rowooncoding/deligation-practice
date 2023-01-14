@@ -1,14 +1,3 @@
-
-// let arr = [{
-//   name:'tiger',
-//   age: 34,
-// },2,3,4];
-
-//   arr[0].name  // tiger
-
-
-// 이벤트 위임 ! 
-
 const data = [
   {
     "id": 1,
@@ -31,11 +20,6 @@ const data = [
     "alt": "물방을 모양의 독특한 디자인의 의자들을 나열한 공간"
   }
 ]
-
-// 네비게이션에게 이벤트를 건다
-// 핸들러를 연결한다.
-// 이벤트 객체에서 타겟을 찾는다.
-
 
 const navigation = getNode('.navigation');
 const visualImage = getNode('.visual img');
@@ -94,7 +78,6 @@ function handler(e){
 }
 
 
-navigation.addEventListener('click',handler);
 
 
 
@@ -107,23 +90,4 @@ navigation.addEventListener('click',handler);
 
 
 
-
-
-
-
-
-
-
-/* 
-const li_1 = getNode('.navigation > li:nth-child(1)');
-const li_2 = getNode('.navigation > li:nth-child(2)');
-li_1.addEventListener('click',()=>{
-  
-  
-})
-li_2.addEventListener('click',(e)=>{
-  li_1.classList.add('is-active')
-  e.currentTarget.classList.add('is-active')
-})
- */
 
