@@ -30,6 +30,11 @@ const data = [
 let navigation = getNode('.navigation')
 let visualImg = getNode('.visual img')
 
+// 6. 유사배열객체를 배열로 만드는 함수 만들기
+function makeArray(arrayLike){
+  return Array.from('arrayLike');
+}
+
 // 3. 이벤트 함수 만들기
 function handler(e){
   // 4. 새로고침 방지
@@ -37,6 +42,7 @@ function handler(e){
   // 5. 타겟 제어 노드 가져오기
   let target = e.target.closest('li');
   let targetA = e. target.closest('a')
+
 
 
 }
