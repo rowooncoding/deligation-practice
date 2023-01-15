@@ -41,7 +41,7 @@ function handler(e){
   e.preventDefault();
   // 5. 타겟 제어 노드 가져오기
   let target = e.target.closest('li');
-  let targetA = e. target.closest('a')
+  let targetA = e.target.closest('a')
 
   // 7. 6번에서 만든 함수를 사용해서 li배열로 만드는 list만듬
   let list = makeArray(navigation.children);
@@ -50,6 +50,10 @@ function handler(e){
 
   // 9. li를 순회하며 is-active 적용
   list.forEach(item => removeClass(item,'is-active'))
+
+  // 10. 사진과 alt옮기기
+  attr(visualImg,'src',targetA.href);
+  attr(visualImg,'alt',data[index-1].alt);
 
   // 9. 
   addClass(target,'is-active');
