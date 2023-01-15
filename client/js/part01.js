@@ -42,6 +42,8 @@ function handler(e){
   // 5. 타겟 제어 노드 가져오기
   let target = e.target.closest('li');
   let targetA = e.target.closest('a')
+  // 11. 오류 수정
+  if(!target || !targetA) return;
 
   // 7. 6번에서 만든 함수를 사용해서 li배열로 만드는 list만듬
   let list = makeArray(navigation.children);
