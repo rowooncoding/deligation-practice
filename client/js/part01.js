@@ -26,7 +26,31 @@ const data = [
   }
 ]
 
+// 1. 노드 가져오기
+let navigation = getNode('.navigation')
+let visualImg = getNode('.visual img')
 
+// 3. 이벤트 함수 만들기
+function handler(e){
+  // 4. 새로고침 방지
+  e.preventDefault();
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// 2. 이벤트 핸들러 호출
+navigation.addEventListener('click',handler);
 
 
 
