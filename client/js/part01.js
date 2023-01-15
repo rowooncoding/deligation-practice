@@ -36,9 +36,9 @@ function handler(e){
   e.preventDefault();
   // 5. 타겟 제어 노드 가져오기
   let target = e.target.closest('li');
-  let targetA = e. target.closest('.')
+  let targetA = e. target.closest('a')
 
-  
+
 }
 
 
