@@ -34,9 +34,11 @@ let visualImg = getNode('.visual img')
 function handler(e){
   // 4. 새로고침 방지
   e.preventDefault();
+  // 5. 타겟 제어 노드 가져오기
+  let target = e.target.closest('li');
+  let targetA = e. target.closest('.')
 
-
-
+  
 }
 
 
