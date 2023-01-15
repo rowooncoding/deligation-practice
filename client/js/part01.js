@@ -32,7 +32,7 @@ let visualImg = getNode('.visual img')
 
 // 6. 유사배열객체를 배열로 만드는 함수 만들기
 function makeArray(arrayLike){
-  return Array.from('arrayLike');
+  return Array.from(arrayLike);
 }
 
 // 3. 이벤트 함수 만들기
@@ -43,17 +43,18 @@ function handler(e){
   let target = e.target.closest('li');
   let targetA = e. target.closest('a')
 
+  // 7. 6번에서 만든 함수를 사용해서 li배열로 만드는 list만듬
+  let list = makeArray(navigation.children);
+  // 8. 이미지를 넣기 위한 data-index를 타겟으로 가져오는 변수 만듬
+  let index = attr(target,'data-index');
 
+  // 9. li를 순회하며 is-active 적용
+  list.forEach(item => removeClass(item,'is-active'))
+
+  // 9. 
+  addClass(target,'is-active');
 
 }
-
-
-
-
-
-
-
-
 
 
 
